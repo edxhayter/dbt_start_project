@@ -1,15 +1,12 @@
-Welcome to your new dbt project!
+Welcome to Ed Hayter's first dbt Project
 
-### Using the starter project
+### This Project was used for
 
-Try running the following commands:
-- dbt run
-- dbt test
+- completing the dbt learn fundamentals course
+- completing the sql for modularity course
+- completing the introduction to jinja, macros and packages course
 
+### Explore:
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+- Use the models section to see the network of staging, intermediary and mart tables produced.
+- Use the macros section to see the first set of macros created that could be used on repeatable processes.
