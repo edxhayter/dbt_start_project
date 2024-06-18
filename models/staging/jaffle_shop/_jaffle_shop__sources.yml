@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: TIL_PORTFOLIO_PROJECTS
+    schema: EH_jaffle
+    tables:
+      - name: customers
+      - name: orders
+      - name: payment
