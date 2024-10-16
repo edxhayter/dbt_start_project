@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_jaffle_shop__orders
+    description: '{{ doc("stg_jaffle_shop__orders") }}'
+    columns:
+      - name: order_id
+        description: '{{ doc("order_id") }}'
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: '{{ doc("customer_id") }}'
+      - name: order_placed_at
+        description: '{{ doc("order_placed_at") }}'
+      - name: order_status
+        description: '{{ doc("order_status") }}'
+      - name: valid_order_date
+        description: '{{ doc("valid_order_date") }}'        

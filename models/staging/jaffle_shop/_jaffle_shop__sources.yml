@@ -6,5 +6,33 @@ sources:
     schema: EH_jaffle
     tables:
       - name: customers
+        description: '{{ doc("src_customers") }}'
+        columns:
+          - name: id
+            description: unqiue id for customer. Renamed to customer_id in the staging model
+            tests:
+                - unique
+                - not_null
+          - name: first_name
+            description: '{{ doc("first_name") }}'
+          - name: last_name
+            description: '{{ doc("last_name") }}'
       - name: orders
-      - name: payment
+        description: '{{ doc("src_orders") }}'
+        columns:
+          - name: id
+            description: unique id for each order. Renamed to order_id in the staging model
+            tests:
+              - unique
+              - not_null
+          - name: user_id
+            description: customer id associated with each order. Renamed to customer_id in the staging model.
+          - name: order_date
+            description: '{{ doc("order_date") }}'
+          - name: status
+            description: status of the order. Expected values include returned, completed, return_pending, shipped, placed.
+            tests:
+               - accepted_values:
+                  values: ['returned', 'completed', 'return_pending', 'shipped', 'placed']
+          - name: _etl_loaded-at
+            description: '{{ doc("_etl_loaded_at") }}'     
